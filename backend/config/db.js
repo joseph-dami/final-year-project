@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/cyber-awareness');
+    await mongoose.connect(process.env.ATLAS_URI);
     console.log('MongoDB connected');
   } catch (err) {
     console.error(err.message);

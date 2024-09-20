@@ -1,8 +1,7 @@
 import express from 'express'
-import { getQuestions, submitAnswers } from '../controllers/quizController'
+import { getQuestions, insertQuestions, dropQuestions } from '../controllers/quizController.js'
 const router = express.Router();
 
-router.get('/questions', getQuestions);
-router.post('/submit', submitAnswers);
+router.route('/').get(getQuestions).post(insertQuestions).delete(dropQuestions)
 
-module.exports = router;
+export default router;

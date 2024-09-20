@@ -1,0 +1,99 @@
+ul li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-width: 1200px;
+  max-width: 1200px;
+  height: 80px;
+  border: 2px solid #949896;
+  margin: 15px;
+  border-radius: 12px;
+  transition: background-color 0.25s;
+  cursor: pointer;
+}
+
+ul li input[type='radio'] {
+  position: absolute;
+  visibility: hidden;
+}
+
+ul li span {
+  display: block;
+  font-weight: 300;
+  font-size: 1.35em;
+  padding-left: 80px;
+  cursor: pointer;
+  transition: color 0.25s;
+}
+
+ul li:hover {
+  background-color: #CBDDFD;
+  border: 1px solid #325695;
+}
+
+ul li:active {
+  background-color: #CBDDFD;
+  border: 1px solid #325695;
+}
+
+ul li .check {
+  display: block;
+  position: absolute;
+  border: 5px solid #949896;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: border 0.25s;
+}
+
+ul li .check::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  top: 50%;
+  background-color: #949896;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background 0.25s;
+}
+
+input[type='radio']:checked ~ .check {
+  border-color: #325695;
+}
+
+input[type='radio']:checked ~ .check::before {
+  background-color: #325695;
+}
+
+input[type='radio']:checked ~ label {
+  color: #325695;
+}
+
+/* Hover effect for checked state */
+ul li:hover .checked {
+  border-color: #953232;
+}
+
+ul li .wrong::before {
+  background: #953232;
+  border-color: #953232;
+}
+
+ul li .wrong {
+  display: block;
+  position: absolute;
+  border: 5px solid #953232;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: border 0.25s;
+}

@@ -1,20 +1,32 @@
-import Question from '../models/Question'
+import Question from '../models/Question.js'
+import questions, { answers } from '../data/questions.js'
 
 export const getQuestions = async (req, res) => {
-  const questions = await Question.find().limit(10);
-  res.json(questions);
+  try {
+    const q = await Question.find();
+    res.json(q)
+} catch (error) {
+    res.json({ error })
+}
 };
 
-export const submitAnswers = async (req, res) => {
-  const { answers } = req.body;
-  let score = 0;
+/** insert all questinos */
+export const insertQuestions = async (req, res) => {
+  try {
+      const data = await Question.insertMany({ questions, answers })
 
-  for (const answer of answers) {
-    const question = await Question.findById(answer.questionId);
-    if (question.answer === answer.selected) {
-      score++;
-    }
+      res.json({ msg: "Data Saved Successfully...!", data})
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
+}
 
-  res.json({ score });
-};
+/** Delete all Questions */
+export const dropQuestions =  async (req, res) => {
+  try {
+       await Question.deleteMany();
+       res.json({ msg: "Questions Deleted Successfully...!"});
+  } catch (error) {
+       res.json({ error })
+  }
+}
