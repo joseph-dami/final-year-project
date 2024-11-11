@@ -1,16 +1,4 @@
-<h1>Intelligent Cyber Awareness Assessment and Control System for Financial Institutions</h1>
-
-<h3>Project Overview</h3>
-<p>The Intelligent Cyber Awareness Assessment and Control System is designed to enhance cybersecurity awareness among staff members in financial institutions. It leverages advanced technologies such as Natural Language Processing (NLP), social media scanning, and gamification to provide personalized, real-time assessments and training. The goal of this system is to help financial institutions strengthen their cybersecurity defenses by educating their workforce on the latest cyber threats and best practices.</p>
-
-<h3>Key Features</h3>
-<ul>
-  <li>Real-time Social Media Scanning: Collects and analyzes real-time data from social media platforms to identify emerging cyber threats.</li>
-<li>Natural Language Processing (NLP): Analyzes social media data to generate actionable cybersecurity intelligence and assessment questions.</li>
-<li>Assessment and Feedback Module: Provides personalized feedback and recommendations based on users’ quiz performance.</li>
-<li>Monitoring and Analytics: Tracks user activity and system performance to identify potential risks and areas for improvement.</li>
-</ul>
-
+<h1>A Simple Cyber Awareness Assessment App</h1>
 
 
 <h3>Project Architecture</h3>
@@ -19,8 +7,7 @@ The system architecture is built using the following technologies:
   <li>Frontend: ReactJS</li>
   <li>Backend: Node.js and Express.js</li>
   <li>Database: MongoDB</li>
-  <li>Social Media Data Collection: Twitter API</li>
-  <li>Development Tools: Visual Studio Code, Node.js, Express.js, MongoDB, NLP libraries, Twitter API</li>
+  <li>Development Tools: Visual Studio Code, Node.js, Express.js, MongoDB</li>
 </ul>
 
 
